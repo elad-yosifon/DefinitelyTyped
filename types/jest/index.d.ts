@@ -1,4 +1,4 @@
-// Type definitions for Jest 22.2
+// Type definitions for Jest 23.0
 // Project: http://facebook.github.io/jest/
 // Definitions by: Asana <https://asana.com>
 //                 Ivo Stratev <https://github.com/NoHomey>
@@ -13,6 +13,7 @@
 //                 Ahn <https://github.com/AhnpGit>
 //                 Josh Goldberg <https://github.com/joshuakgoldberg>
 //                 Bradley Ayers <https://github.com/bradleyayers>
+//                 Elad Yosifon <https://github.com/elad-yosifon>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 // TypeScript Version: 2.3
 
@@ -371,6 +372,7 @@ declare namespace jest {
          * If the promise is fulfilled the assertion fails.
          */
         rejects: Matchers<Promise<R>>;
+        nthCalledWith(nth:number, ...args: any[]): R;
         lastCalledWith(...args: any[]): R;
         /**
          * Checks that a value is what you expect. It uses `===` to check strict equality.
